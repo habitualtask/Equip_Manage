@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JoinActivity">
+
+    <Spinner
+        android:id="@+id/join_company"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:entries="@array/join_company"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="회원가입페이지"
+        android:textColor="#ff0000"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/join_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="아이디"
+        android:textSize="20dp"
+        android:textColorHint="#000000" />
+
+    <EditText
+        android:id="@+id/join_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/join_id"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="20dp"
+        android:hint="비밀번호"
+        android:textColorHint="#000000"
+        />
+    <EditText
+        android:id="@+id/join_pwch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/join_pw"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="20dp"
+        android:hint="비밀번호확인"
+        android:textColorHint="#000000"
+        />
+    <EditText
+        android:id="@+id/join_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@id/join_pwch"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="이름"
+        android:textSize="20dp"
+        android:textColorHint="#000000" />
+    <EditText
+        android:id="@+id/join_major"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/join_name"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="전공"
+        android:textSize="20dp"
+        android:textColorHint="#000000" />
+
+    <EditText
+        android:id="@+id/join_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/join_major"
+        android:layout_marginTop="10dp"
+        android:ems="15"
+        android:inputType="textEmailAddress"
+        android:hint="이메일"
+        android:textSize="20dp"
+        android:textColorHint="#000000"/>
+
+    <Spinner
+        android:id="@+id/join_rank"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/join_email"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/join_rank"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/join_joinbtn"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/join_email"
+        android:layout_marginTop="80dp"
+        android:text="가입" />
+
+</RelativeLayout>

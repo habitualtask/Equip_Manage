@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/list_Area"
+    >
+
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/dell" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+                <TextView
+                    android:id="@+id/list_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="ttttt"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+                <TextView
+            android:id="@+id/list_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+
+            android:text="2020-3-10 등록됨"
+            android:textSize="16dp"
+            android:textColor="#666666" />
+</LinearLayout>
+</LinearLayout>

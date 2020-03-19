@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="join_company">
+        <item>대구가톨릭대학교</item>
+        <item>경일대학교</item>
+        <item>대구대학교</item>
+        <item>경북대학교</item>
+        <item>영남대학교</item>
+        <item>울산대학교</item>
+        <item>계명대학교</item>
+        <item>퍼듀대학교</item>
+    </string-array>
+</resources>

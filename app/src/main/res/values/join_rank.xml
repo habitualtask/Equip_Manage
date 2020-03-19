@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="join_rank">
+        <item>일반회원</item>
+        <item>회장</item>
+        <item>부회장</item>
+        <item>써트장</item>
+        <item>써트부장</item>
+        <item>총무</item>
+        <item>교육부장</item>
+        <item>장비부장</item>
+    </string-array>
+</resources>

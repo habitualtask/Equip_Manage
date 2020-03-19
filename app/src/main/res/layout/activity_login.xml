@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="10"
+        android:ems="10"
+        android:id="@+id/login_id"
+        android:layout_marginTop="35mm"
+        android:hint="아이디"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:maxLength="20"
+        android:id="@+id/login_pw"
+        android:layout_below="@+id/login_id"
+        android:layout_alignLeft="@+id/login_id"
+        android:layout_alignStart="@+id/login_id"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:hint="비밀번호" />
+
+    <Button
+        android:text="로그인"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_loginbtn"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/login_pw"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/login_joinbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textSize="15dp"
+        android:textColor="#FF00008B"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@id/login_loginbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        />
+</RelativeLayout>

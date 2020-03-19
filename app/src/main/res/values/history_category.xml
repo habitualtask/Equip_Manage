@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="history_category">
+        <item>전체</item>
+        <item>도서</item>
+        <item>장비</item>
+    </string-array>
+
+    <string-array name="history_Year">
+        <item>2004년</item><item>2005년</item><item>2006년</item><item>2007년</item>
+        <item>2008년</item><item>2009년</item><item>2010년</item><item>2011년</item>
+        <item>2012년</item><item>2013년</item><item>2014년</item><item>2015년</item>
+        <item>2016년</item><item>2017년</item><item>2018년</item><item>2019년</item>
+        <item>2020년</item><item>2021년</item><item>2022년</item><item>2022년</item>
+        <item>2023년</item><item>2024년</item><item>2025년</item><item>2026년</item>
+        <item>2027년</item><item>2028년</item><item>2029년</item><item>2030년</item>
+        <item>2031년</item><item>2032년</item><item>2033년</item><item>2034년</item>
+        <item>2035년</item><item>2036년</item><item>2037년</item><item>2038년</item>
+        <item>2039년</item><item>2040년</item><item>2041년</item><item>2042년</item>
+        <item>2043년</item><item>2044년</item><item>2045년</item><item>2046년</item>
+        <item>2047년</item><item>2048년</item><item>2049년</item><item>2050년</item>
+        <item>2051년</item><item>2052년</item><item>2053년</item><item>2054년</item>
+        <item>2055년</item><item>2056년</item><item>2057년</item><item>2058년</item>
+        <item>2059년</item><item>2060년</item><item>2061년</item><item>2062년</item>
+        <item>2063년</item><item>2064년</item><item>2065년</item><item>2066년</item>
+        <item>2067년</item><item>2068년</item><item>2069년</item><item>2070년</item>
+        <item>2071년</item><item>2072년</item><item>2073년</item><item>2074년</item>
+        <item>2075년</item><item>2076년</item><item>2077년</item><item>2078년</item>
+        <item>2079년</item><item>2080년</item><item>2081년</item><item>2082년</item>
+        <item>2083년</item><item>2084년</item><item>2085년</item><item>2086년</item>
+        <item>2087년</item><item>2088년</item><item>2089년</item><item>2090년</item>
+        <item>2091년</item><item>2092년</item><item>2093년</item><item>2094년</item>
+        <item>2095년</item><item>2096년</item><item>2097년</item><item>2098년</item>
+        <item>2099년</item><item>2100년</item>
+    </string-array>
+
+    <string-array name="history_Month">
+        <item>1월</item>
+        <item>2월</item>
+        <item>3월</item>
+        <item>4월</item>
+        <item>5월</item>
+        <item>6월</item>
+        <item>7월</item>
+        <item>8월</item>
+        <item>9월</item>
+        <item>10월</item>
+        <item>11월</item>
+        <item>12월</item>
+    </string-array>
+
+    <string-array name="history_Day">
+        <item>1일</item>
+        <item>2일</item>
+        <item>3일</item>
+        <item>4일</item>
+        <item>5일</item>
+        <item>6일</item>
+        <item>7일</item>
+        <item>8일</item>
+        <item>9일</item>
+        <item>10일</item>
+        <item>11일</item>
+        <item>12일</item>
+        <item>13일</item>
+        <item>14일</item>
+        <item>15일</item>
+        <item>16일</item>
+        <item>17일</item>
+        <item>18일</item>
+        <item>19일</item>
+        <item>20일</item>
+        <item>21일</item>
+        <item>22일</item>
+        <item>23일</item>
+        <item>24일</item>
+        <item>25일</item>
+        <item>26일</item>
+        <item>27일</item>
+        <item>28일</item>
+        <item>29일</item>
+        <item>30일</item>
+        <item>31일</item>
+    </string-array>
+</resources>
