@@ -22,7 +22,6 @@ public class LoginActivity extends AppCompatActivity {
         final EditText login_id=findViewById(R.id.login_id);
         final EditText login_pw=findViewById(R.id.login_pw);
 
-
         login_loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,8 +30,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(id.length()==0){
                     Toast.makeText(getApplicationContext(),"ID 입력하세요", Toast.LENGTH_SHORT).show();
                     return;
-                }
-                if(pw.length()==0){
+                }if(pw.length()==0){
                     Toast.makeText(getApplicationContext(),"PW 입력하세요", Toast.LENGTH_SHORT).show();
                     return;
                 }
