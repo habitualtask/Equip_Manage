@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".PwChActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="10"
+        android:ems="10"
+        android:id="@+id/pwch_pw1"
+        android:layout_marginTop="35mm"
+        android:hint="기존 비밀번호"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:maxLength="20"
+        android:id="@+id/pwch_pw2"
+        android:layout_below="@+id/pwch_pw1"
+        android:layout_alignLeft="@+id/pwch_pw1"
+        android:layout_alignStart="@+id/pwch_pw1"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:hint="변경 비밀번호" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:maxLength="20"
+        android:id="@+id/pwch_pw3"
+        android:layout_below="@+id/pwch_pw2"
+        android:layout_alignLeft="@+id/pwch_pw2"
+        android:layout_alignStart="@+id/pwch_pw2"
+        android:textColorHint="#000000"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:hint="변경 비밀번호 확인" />
+    <Button
+        android:text="변경"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pwch_chbtn"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/pwch_pw3"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

@@ -67,37 +67,37 @@ public class JoinActivity extends AppCompatActivity {
                 final String major=join_major.getText().toString();
                 final String email=join_email.getText().toString();
                 if (id.length()==0){
-                    Toast.makeText(getApplicationContext(),"ID 입력하세요",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"아이디 입력하세요",Toast.LENGTH_SHORT).show();
                     join_id.requestFocus();
                     return;
                 }
                 if (pw.length()==0){
-                    Toast.makeText(getApplicationContext(),"PassWord 입력하세요",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"비밀번호 입력하세요",Toast.LENGTH_SHORT).show();
                     join_pw.requestFocus();
                     return;
                 }else if(pw.length()>=8&&pwch.length()>=8){
                     if (!pw.equals(pwch)){
-                        Toast.makeText(getApplicationContext(),"pw와 pwch가 일치하지않습니다.",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"비밀번호와 일치하지않습니다.",Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }else{
-                    Toast.makeText(getApplicationContext(),"Password는 8자리이상 입력해주세요.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"비밀번호는 8자리이상 입력해주세요.",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (pwch.length()==0){
-                    Toast.makeText(getApplicationContext(),"PassWord Check입력하세요",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"비밀번호확인 입력하세요",Toast.LENGTH_SHORT).show();
                     join_pwch.requestFocus();
                     return;
                 }if (name.length()==0){
-                    Toast.makeText(getApplicationContext(),"Name 입력하세요",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"이름 입력하세요",Toast.LENGTH_SHORT).show();
                     join_name.requestFocus();
                     return;
                 }if (major.length()==0){
-                    Toast.makeText(getApplicationContext(),"Mojor 입력하세요",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"부서 입력하세요",Toast.LENGTH_SHORT).show();
                     join_major.requestFocus();
                     return;
                 }if (email.length()==0){
-                    Toast.makeText(getApplicationContext(),"Email 입력하세요",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"이메일 입력하세요",Toast.LENGTH_SHORT).show();
                     join_email.requestFocus();
                     return;
                 }
