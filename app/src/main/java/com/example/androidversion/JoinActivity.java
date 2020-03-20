@@ -57,7 +57,6 @@ public class JoinActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) { }
         });
-
         join_joinbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
