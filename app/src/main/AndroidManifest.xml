@@ -12,7 +12,6 @@
         <activity android:name=".PwChActivity"></activity>
         <activity android:name=".SearchClickActivity" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".NoticeActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".MypageActivity" />
         <activity android:name=".JoinActivity" />

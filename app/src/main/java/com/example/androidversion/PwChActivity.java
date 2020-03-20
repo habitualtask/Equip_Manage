@@ -1,5 +1,6 @@
 package com.example.androidversion;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -75,7 +76,11 @@ public class PwChActivity extends AppCompatActivity {
                     pwch_pw3.requestFocus();
                     return;
                 }
+                Intent intent11 = new Intent(getApplicationContext(),MypageActivity.class);
+                startActivity(intent11);
+                finish();
             }
         });
+
     }
 }
