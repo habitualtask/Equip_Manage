@@ -90,7 +90,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="전공"
+        android:hint="부서"
         android:textSize="20dp"
         android:textColorHint="#000000" />
 
