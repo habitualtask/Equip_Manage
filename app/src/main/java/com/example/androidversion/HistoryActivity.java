@@ -19,7 +19,7 @@ import java.util.List;
 public class HistoryActivity extends AppCompatActivity {
     Button history_searchbtn;
     private ListView history_list;              //빈 리스트
-    private SearchAdapter adapter;              //리스트뷰에 연결할 어뎁터
+    private HistoryAdapter adapter;              //리스트뷰에 연결할 어뎁터
     private ArrayList<Equipment> HistoryList;   //전체값리스트(데이터넣은 리스트변수)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +41,13 @@ public class HistoryActivity extends AppCompatActivity {
         HistoryList=new ArrayList<Equipment>();
         history_list=(ListView)findViewById(R.id.history_list);
         history_setList();
-        adapter=new SearchAdapter(HistoryList,this);
+        adapter=new HistoryAdapter(HistoryList,this);
         history_list.setAdapter(adapter);
 
         history_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent10 =new Intent(getApplicationContext(),SearchClickActivity.class);
+                Intent intent10 =new Intent(getApplicationContext(),BookClickActivity.class);
                 intent10.putExtra("list_image",Integer.toString(HistoryList.get(i).getList_image()));
                 intent10.putExtra("list_title",HistoryList.get(i).getList_title());
                 intent10.putExtra("list_rent",HistoryList.get(i).getList_rent());
