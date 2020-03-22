@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class BookActivity extends AppCompatActivity {
     private ListView book_list;            //빈 리스트
-    private SearchAdapter adapter;          //리스트뷰에 연결할 어댑터
+    private BookAdapter adapter;          //리스트뷰에 연결할 어댑터
     private ArrayList<Equipment> BookList;      //전체값리스트(데이터넣은리스트변수)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +28,18 @@ public class BookActivity extends AppCompatActivity {
         BookList = new ArrayList<Equipment>();
         book_list = (ListView)findViewById(R.id.book_list);
         book_setList();
-        adapter=new SearchAdapter(BookList,this);
+        adapter=new BookAdapter(BookList,this);
         book_list.setAdapter(adapter);
 
         book_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent10 =new Intent(getApplicationContext(),SearchClickActivity.class);
+                Intent intent10 =new Intent(getApplicationContext(),BookClickActivity.class);
                 intent10.putExtra("list_image",Integer.toString(BookList.get(i).getList_image()));
                 intent10.putExtra("list_title",BookList.get(i).getList_title());
+                intent10.putExtra("list_rent",BookList.get(i).getList_rent());                 //빌린날짜
+                intent10.putExtra("list_return",BookList.get(i).getList_return());             //반납예정일
+                intent10.putExtra("list_state",BookList.get(i).getList_state());               //상태(대여중,연체)
                 intent10.putExtra("list_category",BookList.get(i).getList_category());
                 intent10.putExtra("list_company",BookList.get(i).getList_company());
                 intent10.putExtra("list_serial",BookList.get(i).getList_serial());
@@ -59,7 +62,7 @@ public class BookActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     private void book_setList(){
-        BookList.add(new Equipment(R.drawable.nodejs,"도서 - DO IT NodeJS!!!","도서","한빛","ISBN 979-11-8737-080-2","2020/3/10","32,000","없음"));
-        BookList.add(new Equipment(R.drawable.network,"도서 - 네트워크해킹과보안","도서","한빛","ISBN 979-11-5664-227-0","2020/3/7","26,000","없음"));
+        BookList.add(new Equipment(R.drawable.nodejs,"도서 - DO IT NodeJS!!!","대여중","2020-03-21~","2020-04-01","D-8","도서","한빛","ISBN 979-11-8737-080-2","2020/3/10","32,000","없음"));
+        BookList.add(new Equipment(R.drawable.network,"도서 - 네트워크해킹과보안","연체","2020-01-01","2020-01-14","D+66","도서","한빛","ISBN 979-11-5664-227-0","2020/3/7","26,000","없음"));
     }
 }

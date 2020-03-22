@@ -103,15 +103,15 @@ public class SearchActivity extends AppCompatActivity {
         }adapter.notifyDataSetChanged();    //list데이터가 변경되었음므로 어뎁터 갱신 > 화면에 보냄
     }
     private void settingList() {
-        list.add(new Equipment(R.drawable.vim,"빔프로젝트","장비","SONY","2143-1001","2020/3/10","250,000","없음ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ"));
-        list.add(new Equipment(R.drawable.dell,"모니터01","장비","DELL","2111-1111","2016/11/2","330,000","없음"));
-        list.add(new Equipment(R.drawable.lg,"모니터02","장비","LG","2111-1112","2015/5/4","278,000","없음"));
-        list.add(new Equipment(R.drawable.refrigerator,"냉장고","기타","삼성","4001-0001","2016/11/11","600,000","대여불가"));
-        list.add(new Equipment(R.drawable.hdmi,"HDMI케이블","장비","SONY","2010-1111","2019/12/25","5,000","크리스마스ㅎㅎ"));
-        list.add(new Equipment(R.drawable.nodejs,"도서 - DO IT NodeJS!!!","도서","한빛","ISBN 979-11-8737-080-2","2020/3/10","32,000","없음"));
-        list.add(new Equipment(R.drawable.network,"도서 - 네트워크해킹과보안","도서","한빛","ISBN 979-11-5664-227-0","2020/3/7","26,000","없음"));
-        list.add(new Equipment(R.drawable.cucku,"밥솥","기타","LG","4002-0214","2014/2/10","120,000","대여불가"));
-        list.add(new Equipment(R.drawable.print,"프린트","장비","대구가톨릭대학교","4001-0003","2015/10/8","모름","대여불가"));
+        list.add(new Equipment(R.drawable.vim,"빔프로젝트","대여중","2020-03-18-","2020-03-30","D-7","장비","SONY","2143-1001","2020/3/10","250,000","없음"));
+        list.add(new Equipment(R.drawable.dell,"모니터01","대여중","2020-03-18-","2020-03-30","D-7","장비","DELL","2111-1111","2016/11/2","330,000","없음"));
+        list.add(new Equipment(R.drawable.lg,"모니터02","대여가능","","","","장비","LG","2111-1112","2015/5/4","278,000","없음"));
+        list.add(new Equipment(R.drawable.refrigerator,"냉장고","대여불가","","","","기타","삼성","4001-0001","2016/11/11","600,000","대여불가"));
+        list.add(new Equipment(R.drawable.hdmi,"HDMI케이블","연체","2019-12.25~","2019-01-03","D+81","장비","SONY","2010-1111","2019/12/25","5,000","크리스마스ㅎㅎ"));
+        list.add(new Equipment(R.drawable.nodejs,"도서 - DO IT NodeJS!!!","대여중","2020-03-21~","2020-04-01","D-8","도서","한빛","ISBN 979-11-8737-080-2","2020/3/10","32,000","없음"));
+        list.add(new Equipment(R.drawable.network,"도서 - 네트워크해킹과보안","연체","2020-01-01","2020-01-14","D+66","도서","한빛","ISBN 979-11-5664-227-0","2020/3/7","26,000","없음"));
+        list.add(new Equipment(R.drawable.cucku,"밥솥","대여불가","","","","기타","LG","4002-0214","2014/2/10","120,000","대여불가"));
+        list.add(new Equipment(R.drawable.print,"프린트","대여불가","","","","장비","대구가톨릭대학교","4001-0003","2015/10/8","모름","대여불가"));
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu)

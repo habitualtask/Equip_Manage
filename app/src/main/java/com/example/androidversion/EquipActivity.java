@@ -11,13 +11,14 @@ import android.webkit.WebView;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EquipActivity extends AppCompatActivity {
     private ListView equip_list;            //빈 리스트
-    private SearchAdapter adapter;          //리스트뷰에 연결할 어댑터
+    private BookAdapter adapter;          //리스트뷰에 연결할 어댑터
     private ArrayList<Equipment> EquipList;      //전체값리스트(데이터넣은리스트변수)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +32,18 @@ public class EquipActivity extends AppCompatActivity {
         EquipList = new ArrayList<Equipment>();                 //리스트생성
         equip_list=(ListView)findViewById(R.id.equip_list);
         equip_setList();
-        adapter=new SearchAdapter(EquipList,this);      //list에 연동될 어뎁터생성
+        adapter=new BookAdapter(EquipList,this);      //list에 연동될 어뎁터생성
         equip_list.setAdapter(adapter);                         //리스트뷰에 어뎁터연결
 
         equip_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent10 =new Intent(getApplicationContext(),SearchClickActivity.class);
+                Intent intent10 =new Intent(getApplicationContext(),BookClickActivity.class);
                 intent10.putExtra("list_image",Integer.toString(EquipList.get(i).getList_image()));
                 intent10.putExtra("list_title",EquipList.get(i).getList_title());
+                intent10.putExtra("list_rent",EquipList.get(i).getList_rent());                 //빌린날짜
+                intent10.putExtra("list_return",EquipList.get(i).getList_return());             //반납예정일
+                intent10.putExtra("list_state",EquipList.get(i).getList_state());               //상태(대여중,연체)
                 intent10.putExtra("list_category",EquipList.get(i).getList_category());
                 intent10.putExtra("list_company",EquipList.get(i).getList_company());
                 intent10.putExtra("list_serial",EquipList.get(i).getList_serial());
@@ -64,7 +68,7 @@ public class EquipActivity extends AppCompatActivity {
     }
 
     private void equip_setList(){
-        EquipList.add(new Equipment(R.drawable.hdmi,"HDMI케이블","장비","SONY","2010-1111","2019/12/25","5,000","크리스마스ㅎㅎ"));
-        EquipList.add(new Equipment(R.drawable.dell,"모니터01","장비","DELL","2111-1111","2016/11/2","330,000","없음"));
+        EquipList.add(new Equipment(R.drawable.hdmi,"HDMI케이블","연체","2019-12.25~","2019-01-03","D+81","장비","SONY","2010-1111","2019/12/25","5,000","크리스마스ㅎㅎ"));
+        EquipList.add(new Equipment(R.drawable.dell,"모니터01","대여중","2020-03-21~","2020-04-01","D-8","장비","DELL","2111-1111","2016/11/2","330,000","없음"));
     }
 }

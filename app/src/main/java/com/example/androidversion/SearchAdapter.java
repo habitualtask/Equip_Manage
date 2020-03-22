@@ -48,6 +48,7 @@ public class SearchAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             viewHolder.label3 = (ImageView) converView.findViewById(R.id.list_image);
             viewHolder.label1 = (TextView) converView.findViewById(R.id.list_title);
+            viewHolder.label5 = (TextView)converView.findViewById(R.id.list_state);
             viewHolder.label2 = (TextView) converView.findViewById(R.id.list_category);
             viewHolder.label4 = (TextView)converView.findViewById(R.id.list_serial);
 
@@ -59,14 +60,16 @@ public class SearchAdapter extends BaseAdapter {
             viewHolder.label1.setText(list.get(position).getList_title());
             viewHolder.label2.setText(list.get(position).getList_category());
             viewHolder.label4.setText(list.get(position).getList_serial());
+            viewHolder.label5.setText(list.get(position).getList_state());
             //리스트에 있는 데이터를 리스트뷰 셀에 뿌림
             return converView;
         }
 
         private class ViewHolder {
-            public TextView label1;
-            public TextView label2;
-            public ImageView label3;
-            public TextView label4;
+            public TextView label1; //title
+            public TextView label2; //category
+            public ImageView label3;    //image
+            public TextView label4; //serial
+            public TextView label5; //state
         }
     }

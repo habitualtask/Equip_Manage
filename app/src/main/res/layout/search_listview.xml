@@ -5,30 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:id="@+id/list_Area"
-    >
-
+    android:id="@+id/list_Area">
         <ImageView
             android:id="@+id/list_image"
             android:layout_width="150dp"
             android:layout_height="100dp"
             app:srcCompat="@drawable/dell" />
-
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
                 <TextView
                     android:id="@+id/list_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
-                    android:gravity="center_vertical"
-                    android:paddingLeft="5dp"
+                    android:layout_gravity="left"
                     android:text="ttttt"
+                    android:layout_weight="1"
                     android:textColor="#000000"
                     android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/list_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="대여중"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -37,8 +46,14 @@
                             android:id="@+id/list_category"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
                             android:text="분류"
+                            android:textSize="16dp"
+                            android:textColor="#666666" />
+                        <TextView
+                            android:id="@+id/under1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"
                             android:textSize="16dp"
                             android:textColor="#666666" />
                         <TextView
@@ -50,5 +65,5 @@
                             android:textSize="16dp"
                             android:textColor="#666666" />
                 </LinearLayout>
-</LinearLayout>
+        </LinearLayout>
 </LinearLayout>

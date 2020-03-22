@@ -14,6 +14,7 @@
         <activity android:name=".SettingActivity" />
         <activity android:name=".PwChActivity" />
         <activity android:name=".SearchClickActivity" />
+        <activity android:name=".BookClickActivity"/>
         <activity android:name=".HistoryActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".MypageActivity" />
