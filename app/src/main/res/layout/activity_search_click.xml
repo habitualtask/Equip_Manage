@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".SearchClickActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:id="@+id/app_toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상세보기"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+    </android.support.v7.widget.Toolbar>
 
     <ImageView
         android:id="@+id/click_img"
@@ -30,8 +46,9 @@
         android:id="@+id/click_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="비품명이 들어가게 됩니다!"
+        android:text="비품명"
         android:textSize="20dp"
+
         android:textColor="#000000"/>
 </LinearLayout>
     <LinearLayout
@@ -43,14 +60,109 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="설명 : "
+        android:text="분류 : "
         android:textSize="20dp"
         android:textColor="#000000"/>
     <TextView
-        android:id="@+id/click_desc"
+        android:id="@+id/click_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="비품의 설명이 들어갑니다.."
+        android:text="분류(장비,도서,기타)"
         android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회사 : "
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/click_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제조사,출판사"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시리얼번호 : "
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/click_serial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="111-1111"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="구매일자 : "
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/click_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020/2/22"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="구매가격 : "
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/click_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="200,000"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비고란 : "
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/click_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="없음."
+            android:textSize="20dp"/>
     </LinearLayout>
 </LinearLayout>
