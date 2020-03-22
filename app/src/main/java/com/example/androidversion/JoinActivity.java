@@ -2,10 +2,13 @@ package com.example.androidversion;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +21,10 @@ public class JoinActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
-        setTitle("키퍼회원가입");
+        Toolbar toolbar=(Toolbar)findViewById(R.id.app_toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         join_joinbtn=(Button)findViewById(R.id.join_joinbtn);
         Spinner spinner_company = (Spinner)findViewById(R.id.join_company);
@@ -108,5 +114,15 @@ public class JoinActivity extends AppCompatActivity {
                 //서버에서 무슨 에러인지 보내주면 json에 담아주면 토스트로 보내줌
             }
         });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

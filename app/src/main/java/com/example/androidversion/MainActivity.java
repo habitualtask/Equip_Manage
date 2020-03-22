@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("키퍼의 장비관리앱");
         Intent Splash_intent = new Intent(this,SplashActivity.class);
         startActivity(Splash_intent);
         Button main_loginbtn = findViewById(R.id.main_loginbtn);

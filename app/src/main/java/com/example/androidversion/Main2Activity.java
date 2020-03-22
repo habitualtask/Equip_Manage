@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,12 +30,29 @@ public class Main2Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-
+        final ImageButton main2_equip=(ImageButton)findViewById(R.id.main2_equip);
+        final ImageButton main2_book=(ImageButton)findViewById(R.id.main2_book);
+        final ImageButton main2_calendar=(ImageButton)findViewById(R.id.main2_calendar);
         main2_list = (ListView)findViewById(R.id.main2_list);
         noticedList = new ArrayList<Notice>();
         main2_setList();
         adapter = new NoticeAdapter(getApplicationContext(), noticedList);
         main2_list.setAdapter(adapter);
+
+        main2_equip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),EquipActivity.class);
+                startActivity(intent);
+            }
+        });
+        main2_book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(getApplicationContext(),BookActivity.class);
+                startActivity(intent1);
+            }
+        });
     }
 
 

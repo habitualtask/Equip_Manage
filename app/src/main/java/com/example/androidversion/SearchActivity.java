@@ -25,11 +25,11 @@ import java.util.Locale;
 
 public class SearchActivity extends AppCompatActivity {
     Button search_searchbtn;
-    private ArrayList<Equipment> list;          //데이터 넣은 리스트변수
-    private ListView search_list;          //검색보여줄 리스트변수
-    private EditText search_keyword;    //검색어 입력할 input창
+    private ListView search_list;          //검색보여줄 리스트변수 (빈리스트)
     private SearchAdapter adapter;      //리스트뷰에 연결할 어뎁터
-    private ArrayList<Equipment> arraylist;
+    private ArrayList<Equipment> list;          //데이터 넣은 리스트변수 (전체값리스트)
+    private EditText search_keyword;    //검색어 입력할 input창
+    private ArrayList<Equipment> arraylist;     //검색해서 걸러낸 리스트
     //search_category의 전체,도서,장비 따라 선택가능하게끔 하는 기능 추가할 것
     @Override
     protected void onCreate(Bundle savedInstanceState) {
