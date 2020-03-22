@@ -13,17 +13,17 @@
         android:id="@+id/noticeText"
         android:drawableStart="@drawable/notice"
         android:drawableLeft="@drawable/notice"
-        android:background="#87cefa"
+        android:background="#dadada"
         android:textStyle="bold"
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#87cefa">
+        android:background="#dadada">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="gakari"
+            android:text="과업님들"
             android:layout_gravity="center"
             android:padding="3dp"
             android:layout_marginLeft="8dp"
@@ -35,7 +35,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="2017-01-01"
+            android:text="2019-07-15"
             android:layout_gravity="center"
             android:padding="3dp"
             android:textColor="#000000"

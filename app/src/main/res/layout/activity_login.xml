@@ -4,17 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/login"
     >
-
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:inputType="number"
         android:maxLength="10"
         android:ems="10"
         android:id="@+id/login_id"
+        android:background="#d2ffffff"
         android:layout_marginTop="35mm"
         android:hint="아이디"
+
         android:textColorHint="#000000"
         android:textColor="#000000"
         android:textSize="20dp"
@@ -23,10 +25,12 @@
         />
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:inputType="textPassword"
         android:ems="10"
         android:maxLength="20"
+        android:layout_marginTop="10dp"
+        android:background="#d2ffffff"
         android:id="@+id/login_pw"
         android:layout_below="@+id/login_id"
         android:layout_alignLeft="@+id/login_id"
@@ -41,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/login_loginbtn"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/login_pw"
         android:layout_centerHorizontal="true"
         />
@@ -52,10 +56,11 @@
         android:layout_height="wrap_content"
         android:text="회원가입"
         android:textSize="15dp"
-        android:textColor="#FF00008B"
+        android:textColor="#f84000"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:layout_below="@id/login_loginbtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         />
+
 </RelativeLayout>

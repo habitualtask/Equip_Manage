@@ -2,7 +2,7 @@
 <resources>
     <color name="bg_blue">#2087cefa</color>
     <color name="bg_red">#20db7093</color>
-    <color name="colorPrimary">#00A3D2</color>
+    <color name="colorPrimary">#4f9ccf</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#D81B60</color>
 </resources>
