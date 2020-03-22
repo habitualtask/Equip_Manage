@@ -76,7 +76,8 @@ public class Main2Activity extends AppCompatActivity {
                 return true;
 
             case R.id.action_setting:
-                Toast.makeText(getApplicationContext(), "설정", Toast.LENGTH_SHORT).show();
+                Intent intent3 =new Intent(getApplicationContext(),SettingActivity.class);
+                startActivity(intent3);
                 return true;
 
             case R.id.action_logout:

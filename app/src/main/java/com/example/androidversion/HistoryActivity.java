@@ -1,8 +1,11 @@
 package com.example.androidversion;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -14,7 +17,10 @@ public class HistoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        setTitle("비품대여기록");
+        Toolbar toolbar=(Toolbar)findViewById(R.id.app_toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         history_searchbtn=(Button)findViewById(R.id.history_searchbtn);
         Spinner spinner_startYear=(Spinner)findViewById(R.id.history_startYear);
         Spinner spinner_startMonth=(Spinner)findViewById(R.id.history_startMonth);
@@ -29,5 +35,16 @@ public class HistoryActivity extends AppCompatActivity {
                 //날짜에 맞는 리스트를 뽑아낼 것
             }
         });
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        switch(id) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
