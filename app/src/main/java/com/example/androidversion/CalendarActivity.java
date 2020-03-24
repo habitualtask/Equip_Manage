@@ -74,6 +74,7 @@ public class CalendarActivity extends AppCompatActivity {
                 materialCalendarView.clearSelection();
 
                 Toast.makeText(getApplicationContext(), shot_Day , Toast.LENGTH_SHORT).show();
+                //날짜 선택시 해당 날짜로 "일정" 위 날짜 바뀌기
             }
         });
     }private class ApiSimulator extends AsyncTask<Void, Void, List<CalendarDay>> {

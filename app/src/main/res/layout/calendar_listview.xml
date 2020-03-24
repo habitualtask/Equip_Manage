@@ -8,12 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#e1e1e1"
+        android:background="@drawable/corner"
+        android:backgroundTint="#ffffff"
         android:gravity="center">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_gravity="left">
             <TextView
                 android:id="@+id/list_title"
@@ -21,9 +24,10 @@
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:text="취업준비스터디"
+                android:textStyle="bold"
                 android:layout_weight="1"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
             <TextView
                 android:id="@+id/under2"
                 android:layout_width="wrap_content"
@@ -32,7 +36,7 @@
                 android:text="("
                 android:layout_weight="1"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
             <TextView
                 android:id="@+id/list_time"
                 android:layout_width="wrap_content"
@@ -41,7 +45,7 @@
                 android:text="11:00-12:00"
                 android:layout_weight="1"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
             <TextView
                 android:id="@+id/under3"
                 android:layout_width="wrap_content"
@@ -50,12 +54,20 @@
                 android:text=")"
                 android:layout_weight="1"
                 android:textColor="#000000"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,32 +84,37 @@
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="#666666" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="참가대상 : "
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#666666" />
+                <TextView
+                    android:id="@+id/list_participant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="취준생"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#666666" />
+            </LinearLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:text="참가대상 : "
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:textColor="#666666" />
-            <TextView
-                android:id="@+id/list_participant"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:text="취준생"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:textColor="#666666" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
