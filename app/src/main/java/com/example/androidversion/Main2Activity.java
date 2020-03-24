@@ -53,6 +53,13 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+        main2_calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(),CalendarActivity.class);
+                startActivity(intent2);
+            }
+        });
     }
 
 

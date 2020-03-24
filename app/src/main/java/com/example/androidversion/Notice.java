@@ -1,9 +1,9 @@
 package com.example.androidversion;
 
 public class Notice {
-    String notice;
-    String name;
-    String date;
+    String notice;          //공지사항
+    String name;            //등록인
+    String date;            //등록날짜
     public Notice(String notice,String name,String date) {
         this.notice = notice;
         this.name = name;

@@ -20,14 +20,10 @@ public class NoticeAdapter extends BaseAdapter{
     public int getCount(){
         return noticedList.size();//리스트뷰의 총 갯수
     }
-
-
     @Override
     public Object getItem(int position){
         return noticedList.get(position);//해당 위치의 값을 리스트뷰에 뿌려줌
     }
-
-
     @Override
     public long getItemId(int position){
         return position;
@@ -40,6 +36,7 @@ public class NoticeAdapter extends BaseAdapter{
         TextView noticeText = (TextView) v.findViewById(R.id.noticeText);
         TextView nameText = (TextView) v.findViewById(R.id.nameText);
         TextView dateText = (TextView) v.findViewById(R.id.dateText);
+
         noticeText.setText(noticedList.get(position).getNotice());
         nameText.setText(noticedList.get(position).getName());
         dateText.setText(noticedList.get(position).getDate());
