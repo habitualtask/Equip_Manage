@@ -35,15 +35,18 @@
         android:layout_height="wrap_content"
         android:text="2020/03/03"
         android:textSize="20dp"
+        android:textColor="#ffffff"
         android:gravity="center"
-        android:background="@color/bg_blue"/>
+        android:background="#00305a"/>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="10dp"
         android:id="@+id/calendar_list"
         android:layout_weight="1"
         android:dividerHeight="10dp"
         android:divider="#ffffff">
     </ListView>
+
 </LinearLayout>

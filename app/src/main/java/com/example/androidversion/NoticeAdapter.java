@@ -1,6 +1,5 @@
 package com.example.androidversion;
 
-
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,17 +16,11 @@ public class NoticeAdapter extends BaseAdapter{
         this.noticedList = noticedList;
     }
     @Override
-    public int getCount(){
-        return noticedList.size();//리스트뷰의 총 갯수
-    }
+    public int getCount(){ return noticedList.size();}//리스트뷰의 총 갯수
     @Override
-    public Object getItem(int position){
-        return noticedList.get(position);//해당 위치의 값을 리스트뷰에 뿌려줌
-    }
+    public Object getItem(int position){ return noticedList.get(position);}//해당 위치의 값을 리스트뷰에 뿌려줌
     @Override
-    public long getItemId(int position){
-        return position;
-    }
+    public long getItemId(int position){ return position; }
     //리스트뷰에서 실질적으로 뿌려주는 부분임
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

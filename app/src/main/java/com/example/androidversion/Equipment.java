@@ -17,7 +17,6 @@ public class Equipment {
     private String list_return;         //반납예정일
     private String list_dday;           //디데이
 
-    public Equipment(){}
     public Equipment(Integer list_image,String list_title,String list_state,String list_rent,String list_return,String list_dday,String list_category,String list_company,String list_serial,String list_date,String list_price,String list_remark){
         this.list_image=list_image;
         this.list_title=list_title;

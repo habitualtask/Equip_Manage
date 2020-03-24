@@ -10,12 +10,11 @@ import java.util.List;
 
 public class CalendarAdapter extends BaseAdapter {
     private Context context;
-    private List<Calendar> calendarList;
-    public CalendarAdapter(Context context,List<Calendar> calendarList) {
+    private List<Calendarlist> calendarList;
+    public CalendarAdapter(Context context,List<Calendarlist> calendarList) {
         this.context=context;
         this.calendarList=calendarList;
     }
-
     @Override
     public int getCount() { return calendarList.size(); }
     @Override

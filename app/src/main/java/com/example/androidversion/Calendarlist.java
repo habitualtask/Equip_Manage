@@ -1,13 +1,13 @@
 package com.example.androidversion;
 
-public class Calendar {
-    String title;           //일정이름
-    String time;            //시간
-    String regist;          //등록인
-    String participant;     //참가대상
-    String detail;          //설명(시간대와 무슨 일정인지에 대한 간략한 사항)
+public class Calendarlist {
+    private String title;           //일정이름
+    private String time;            //시간
+    private String regist;          //등록인
+    private String participant;     //참가대상
+    private String detail;          //설명(시간대와 무슨 일정인지에 대한 간략한 사항)
 
-    public Calendar(String title,String time,String regist,String participant,String detail){
+    public Calendarlist(String title, String time, String regist, String participant, String detail){
         this.title=title;
         this.time=time;
         this.regist=regist;
