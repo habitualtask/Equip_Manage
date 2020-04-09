@@ -22,101 +22,114 @@
             android:textSize="20sp" />
 
     </android.support.v7.widget.Toolbar>
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TableRow
-            android:gravity="center"
-            android:background="#034ea2">
+            android:background="#034ea2"
+            android:gravity="center">
 
-            <LinearLayout
-                android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/main2_equip"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/corner"
-                android:backgroundTint="#052662"
-                android:padding="12dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/spanner" />
+            <LinearLayout android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/main2_equip"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/corner"
+                    android:backgroundTint="#052662"
+                    android:padding="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/spanner" />
+
                 <TextView
                     android:id="@+id/main2_equipword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
                     android:layout_marginBottom="10dp"
-                    android:textColor="#ffffff"
-                    android:text="장비(0)" />
+                    android:text="장비(0)"
+                    android:textColor="#ffffff" />
             </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/main2_book"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/corner"
-                android:backgroundTint="#052662"
-                android:padding="12dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/book" />
+
+            <LinearLayout android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/main2_book"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/corner"
+                    android:backgroundTint="#052662"
+                    android:padding="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/book" />
+
                 <TextView
                     android:id="@+id/main2_bookword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
                     android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
                     android:layout_marginBottom="10dp"
-                    android:textColor="#ffffff"
-                    android:text="도서(0)" />
+                    android:text="도서(0)"
+                    android:textColor="#ffffff" />
             </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/main2_calendar"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/corner"
-                android:backgroundTint="#052662"
-                android:padding="12dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/calendar" />
-            <TextView
-                android:id="@+id/main2_calendarword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:textColor="#ffffff"
-                android:text="일정(0)" />
+
+            <LinearLayout android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/main2_calendar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/corner"
+                    android:backgroundTint="#052662"
+                    android:padding="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/main2_calendarword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="일정(0)"
+                    android:textColor="#ffffff" />
             </LinearLayout>
         </TableRow>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/main2_list"
-            android:layout_margin="10dp"
-            android:dividerHeight="10dp"
-            android:divider="#ffffff"
-            >
-        </ListView>
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ListView
+                android:id="@+id/main2_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:divider="#ffffff"
+                android:dividerHeight="10dp"></ListView>
 
-    <RelativeLayout
-        android:id="@+id/fragment"
-        android:layout_width="match_parent"
-        android:layout_height="433dp"></RelativeLayout>
+            <Button
+                android:id="@+id/buttonScan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#cce2ee"
+                android:text="QR SCAN"
+                />
+        </LinearLayout>
     </TableLayout>
+
 </LinearLayout>

@@ -14,6 +14,12 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,25 +27,31 @@ public class Main2Activity extends AppCompatActivity {
     private ListView main2_list;
     private NoticeAdapter adapter;
     private List<Notice> noticedList;
+    private IntentIntegrator qrScan;                                                        //qr code scanner object
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
         Toolbar toolbar=(Toolbar)findViewById(R.id.app_toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
         final ImageButton main2_equip=(ImageButton)findViewById(R.id.main2_equip);
         final ImageButton main2_book=(ImageButton)findViewById(R.id.main2_book);
         final ImageButton main2_calendar=(ImageButton)findViewById(R.id.main2_calendar);
+        final Button buttonScan = (Button) findViewById(R.id.buttonScan);                   //QR코드 버튼
+
+        qrScan = new IntentIntegrator(this);                                        //intializing scan object
         main2_list = (ListView)findViewById(R.id.main2_list);
         noticedList = new ArrayList<Notice>();
         main2_setList();
         adapter = new NoticeAdapter(getApplicationContext(), noticedList);
         main2_list.setAdapter(adapter);
 
-        main2_equip.setOnClickListener(new View.OnClickListener() {
+        main2_equip.setOnClickListener(new View.OnClickListener() {                         //장비 button onClick
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),EquipActivity.class);
@@ -48,16 +60,24 @@ public class Main2Activity extends AppCompatActivity {
         });
         main2_book.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {                                            //도서 button onClick
                 Intent intent1 = new Intent(getApplicationContext(),BookActivity.class);
                 startActivity(intent1);
             }
         });
         main2_calendar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {                                        //달력 button onClick
                 Intent intent2 = new Intent(getApplicationContext(),CalendarActivity.class);
                 startActivity(intent2);
+            }
+        });
+        buttonScan.setOnClickListener(new View.OnClickListener() {                          //QR button onClick
+            public void onClick(View v) {
+                //scan option
+                qrScan.setPrompt("Scanning...");
+                //qrScan.setOrientationLocked(false);
+                qrScan.initiateScan();
             }
         });
     }
@@ -117,4 +137,28 @@ public class Main2Activity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    //Getting the scan results
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            //qrcode 가 없으면
+            if (result.getContents() == null) {
+                Toast.makeText(Main2Activity.this, "스캔취소", Toast.LENGTH_SHORT).show();
+            } else {
+                //qrcode 결과가 있으면
+                Toast.makeText(Main2Activity.this, "스캔완료", Toast.LENGTH_SHORT).show();
+                try {
+                    //data를 json으로 변환
+                    JSONObject obj = new JSONObject(result.getContents());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
 }
