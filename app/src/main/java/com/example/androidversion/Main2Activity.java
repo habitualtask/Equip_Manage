@@ -9,8 +9,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -51,6 +53,13 @@ public class Main2Activity extends AppCompatActivity {
         adapter = new NoticeAdapter(getApplicationContext(), noticedList);
         main2_list.setAdapter(adapter);
 
+        main2_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                mOnPopupClick(view);
+            }
+        });
+
         main2_equip.setOnClickListener(new View.OnClickListener() {                         //장비 button onClick
             @Override
             public void onClick(View view) {
@@ -81,6 +90,21 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
+    public void mOnPopupClick(View v){
+        //데이터 담아서 팝업(액티비티) 호출
+        Intent intent = new Intent(this, PopupActivity.class);
+        intent.putExtra("data", "Test Popup");
+        startActivityForResult(intent, 1);
+    }
+    /*@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1){
+            if(resultCode==RESULT_OK){
+                //데이터 받기
+                String result = data.getStringExtra("result");
+            }
+        }
+    }*/
 
 
     private void main2_setList() {

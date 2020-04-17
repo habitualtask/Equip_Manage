@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import org.w3c.dom.Text;
 import java.util.List;
@@ -34,6 +35,7 @@ public class NoticeAdapter extends BaseAdapter{
         nameText.setText(noticedList.get(position).getName());
         dateText.setText(noticedList.get(position).getDate());
         v.setTag(noticedList.get(position).getNotice());
+
         return v;
     }
 }
