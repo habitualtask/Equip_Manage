@@ -148,10 +148,12 @@ public class Main2Activity extends AppCompatActivity {
             } else {
                 //qrcode 결과가 있으면
                 Toast.makeText(Main2Activity.this, "스캔완료", Toast.LENGTH_SHORT).show();
+
                 try {
-                    //data를 json으로 변환
-                    JSONObject obj = new JSONObject(result.getContents());
-                } catch (JSONException e) {
+                    //url을 토스트로 띄우는 테스트(값이 제대로 넘어가는지)
+                    String re = result.getContents();
+                    Toast.makeText(Main2Activity.this,re,Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
