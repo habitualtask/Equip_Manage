@@ -49,5 +49,14 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        Button login_data = findViewById(R.id.login_data);
+        login_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent100 = new Intent(getApplicationContext(),datacheck.class);
+                startActivity(intent100);
+            }
+        });
     }
 }

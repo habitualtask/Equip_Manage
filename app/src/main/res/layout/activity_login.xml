@@ -78,7 +78,16 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         />
-
+    <Button
+        android:text="데이터"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_data"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/login_loginbtn"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        />
 
 
 </RelativeLayout>
