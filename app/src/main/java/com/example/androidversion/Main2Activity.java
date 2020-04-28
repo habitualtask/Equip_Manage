@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,6 +17,14 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -23,7 +32,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main2Activity extends AppCompatActivity {
     private ListView main2_list;
@@ -48,10 +59,7 @@ public class Main2Activity extends AppCompatActivity {
 
         qrScan = new IntentIntegrator(this);                                        //intializing scan object
         main2_list = (ListView)findViewById(R.id.main2_list);
-        noticedList = new ArrayList<Notice>();
-        main2_setList();
-        adapter = new NoticeAdapter(getApplicationContext(), noticedList);
-        main2_list.setAdapter(adapter);
+
 
         main2_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -89,6 +97,54 @@ public class Main2Activity extends AppCompatActivity {
                 qrScan.initiateScan();
             }
         });
+
+        String url = getString(R.string.ip)+"notice/listProcess";
+        url = url.replaceAll(" ", "%20");
+
+        StringRequest request= new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    public void onResponse(final String response) {
+                        try {
+                            JsonParser parser = new JsonParser();
+                            JsonObject jsonObj = (JsonObject)parser.parse(response);
+                            Log.d("kkkk1",response);
+                            JsonArray jsonArray = (JsonArray) jsonObj.get("data");
+                            noticedList = new ArrayList<Notice>();
+                            for(int i=0;i<jsonArray.size();i++){
+                                JsonObject object = (JsonObject) jsonArray.get(i);
+                                String num = object.get("notice_num").getAsString();
+                                String title = object.get("notice_title").getAsString();
+                                Log.d("kkkk2",title);
+                                String name = object.get("user_name").getAsString();
+                                String date = object.get("reporting_date").getAsString();
+                                String views = object.get("views").getAsString();
+                                noticedList.add(new Notice(title,name,date));
+                            }
+
+                            adapter = new NoticeAdapter(getApplicationContext(), noticedList);
+                            main2_list.setAdapter(adapter);
+
+                            //textView.append(response);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                        error.printStackTrace();
+                    }
+                }){
+            protected Map<String, String> getParams(){
+                Map<String,String> params = new HashMap<>();
+                params.put("Content-Type","application/json; charset=utf-8");
+                return params;
+            }
+        };
+        request.setShouldCache(false);
+        Volley.newRequestQueue(this).add(request);
     }
     public void mOnPopupClick(View v){
         //데이터 담아서 팝업(액티비티) 호출
@@ -105,22 +161,9 @@ public class Main2Activity extends AppCompatActivity {
             }
         }
     }*/
-
-
-    private void main2_setList() {
+    private void main2_setList(String title,String name,String date) {
         noticedList = new ArrayList<Notice>();
-        noticedList.add(new Notice("공지사항", "이준범", "2018-09-09"));
-        noticedList.add(new Notice("공지사항", "최홍준", "2018-09-10"));
-        noticedList.add(new Notice("공지사항", "임대동", "2018-09-11"));
-        noticedList.add(new Notice("공지사항", "안교준", "2018-09-12"));
-        noticedList.add(new Notice("공지사항", "정세연", "2018-09-13"));
-        noticedList.add(new Notice("공지사항", "김동훈", "2018-09-14"));
-        noticedList.add(new Notice("공지사항", "이윤재", "2018-09-15"));
-        noticedList.add(new Notice("공지사항", "조수연", "2018-09-16"));
-        noticedList.add(new Notice("공지사항", "이현재", "2018-09-17"));
-        noticedList.add(new Notice("공지사항", "이상원", "2018-09-18"));
-        noticedList.add(new Notice("공지사항", "이재갑", "2018-09-19"));
-        noticedList.add(new Notice("공지사항", "김혜진", "2018-09-20"));
+        noticedList.add(new Notice(title,name,date));
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu)

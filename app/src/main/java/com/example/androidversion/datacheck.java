@@ -25,7 +25,7 @@ public class datacheck extends AppCompatActivity {
         setContentView(R.layout.activity_datacheck);
         textView=(TextView)findViewById(R.id.textView);
 
-        String url = "https://www.google.co.kr";;
+        String url = getString(R.string.ip)+"notice/listProcess";
         url = url.replaceAll(" ", "%20");
         Log.d("kkkk",url);
         StringRequest request= new StringRequest(Request.Method.GET, url,
