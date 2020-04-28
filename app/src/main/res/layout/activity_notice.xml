@@ -45,5 +45,17 @@
             android:id="@+id/dateText"
             android:textStyle="bold"
             />
+        <TextView
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="popup에 들어갈 내용"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:id="@+id/contentText"
+            android:textStyle="bold"
+            />
     </LinearLayout>
 </LinearLayout>

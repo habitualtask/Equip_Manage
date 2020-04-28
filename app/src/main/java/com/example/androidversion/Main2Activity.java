@@ -64,7 +64,12 @@ public class Main2Activity extends AppCompatActivity {
         main2_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                mOnPopupClick(view);
+                //데이터 담아서 팝업(액티비티) 호출
+                Intent intent = new Intent(getApplicationContext(), PopupActivity.class);
+                intent.putExtra("title", noticedList.get(i).getNotice());
+                intent.putExtra("data", noticedList.get(i).getContent());
+                startActivityForResult(intent, 1);
+
             }
         });
 
@@ -118,7 +123,8 @@ public class Main2Activity extends AppCompatActivity {
                                 String name = object.get("user_name").getAsString();
                                 String date = object.get("reporting_date").getAsString();
                                 String views = object.get("views").getAsString();
-                                noticedList.add(new Notice(title,name,date));
+                                String content = object.get("notice_content").getAsString();
+                                noticedList.add(new Notice(title,name,date,content));
                             }
 
                             adapter = new NoticeAdapter(getApplicationContext(), noticedList);
@@ -146,25 +152,7 @@ public class Main2Activity extends AppCompatActivity {
         request.setShouldCache(false);
         Volley.newRequestQueue(this).add(request);
     }
-    public void mOnPopupClick(View v){
-        //데이터 담아서 팝업(액티비티) 호출
-        Intent intent = new Intent(this, PopupActivity.class);
-        intent.putExtra("data", "Test Popup");
-        startActivityForResult(intent, 1);
-    }
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode==1){
-            if(resultCode==RESULT_OK){
-                //데이터 받기
-                String result = data.getStringExtra("result");
-            }
-        }
-    }*/
-    private void main2_setList(String title,String name,String date) {
-        noticedList = new ArrayList<Notice>();
-        noticedList.add(new Notice(title,name,date));
-    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {

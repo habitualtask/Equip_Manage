@@ -10,7 +10,7 @@ import android.view.Window;
 import android.widget.TextView;
 
 public class PopupActivity extends Activity {
-    TextView txtText;
+    TextView txtText,txtTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +20,13 @@ public class PopupActivity extends Activity {
         setContentView(R.layout.activity_popup);
 
         //UI 객체생성
+        txtTitle = (TextView)findViewById(R.id.txtTitle);
         txtText = (TextView)findViewById(R.id.txtText);
 
         //데이터 가져오기
         Intent intent = getIntent();
+        String title = intent.getStringExtra("title");
+        txtTitle.setText(title);
         String data = intent.getStringExtra("data");
         txtText.setText(data);
     }
