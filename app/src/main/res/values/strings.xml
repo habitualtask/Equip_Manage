@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name"></string>
-    <string name="ip">http://49.50.172.95:80/</string>
+    <string name="ip">http://49.50.173.201:80/</string>
 </resources>
